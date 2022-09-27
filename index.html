@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
     <title>VindieText</title>
+    <style>
+        button.btn svg path {
+            fill: #fff;
+        }
+
+        button.btn:hover svg path {
+            fill: #000;
+        }
+
+        .editor {
+            height: 450px;
+            min-height: 300px;
+            overflow-y: auto;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,0.3)!important;
+        }
+        .editor:focus-visible{
+            border-color: #3178ffa6!important;
+            outline: none;
+        }
+        body{
+            background-color:#adb5bd;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container-fluid bg-secondary">
+    <div class="container-fluid">
+        <div class="row bg-secondary py-4">
+            <div class="col text-center">
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-underline"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill-opacity=".36" d="M2 20h20c1.1 0 2 .9 2 2s-.9 2-2 2H2c-1.1 0-2-.9-2-2s.9-2 2-2z" />
+                        <path
+                            d="M10.63 3.93L6.06 15.58c-.27.68.23 1.42.97 1.42.43 0 .82-.27.98-.68L8.87 14h6.25l.87 2.32c.15.41.54.68.98.68.73 0 1.24-.74.97-1.42L13.37 3.93C13.14 3.37 12.6 3 12 3c-.6 0-1.15.37-1.37.93zM9.62 12L12 5.67 14.38 12H9.62z" />
+                    </svg>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-align-justify"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>
+                <button class="btn btn-outline-light">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-12 text-center">
-                <button class="btn btn-success">bold</button>
-                <button class="btn btn-success">italic</button>
-                <button class="btn btn-success">underline</button>
-                <button class="btn btn-success">fontColor</button>
-                <button class="btn btn-success">justifyLeft</button>
-                <button class="btn btn-success">justifyCenter</button>
-                <button class="btn btn-success">justifyRight</button>
-                <button class="btn btn-success">justifyFull</button>
-                <button class="btn btn-success">undo</button>
-                <button class="btn btn-success">redo</button>
+            <div class="col-8 mx-auto my-3 border border-3 editor rounded rounded-3 bg-light"
+                contenteditable="true">
             </div>
         </div>
     </div>
 </body>
+
 </html>
