@@ -10,11 +10,11 @@
 
     <title>VindieText</title>
     <style>
-        button.btn svg path {
+        label.btn svg path {
             fill: #fff;
         }
 
-        button.btn:hover svg path {
+        label.btn:hover svg path {
             fill: #000;
         }
 
@@ -28,58 +28,65 @@
             border-color: #3178ffa6!important;
             outline: none;
         }
+        .color-fix{
+            margin-top: 2px;
+            height: 18px;
+        }
         body{
             background-color:#adb5bd;
         }
     </style>
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="row bg-secondary py-4">
             <div class="col text-center">
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="boldBtn">
                     <i class="fa-solid fa-bold"></i>
                 </button>
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="italicBtn">
                     <i class="fa-solid fa-italic"></i>
                 </button>
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="underlineBtn">
                     <i class="fa-solid fa-underline"></i>
                 </button>
-                <button class="btn btn-outline-light">
+
+                <label for="txtColorBtn" class="btn btn-outline-light">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                         <path fill-opacity=".36" d="M2 20h20c1.1 0 2 .9 2 2s-.9 2-2 2H2c-1.1 0-2-.9-2-2s.9-2 2-2z" />
                         <path
-                            d="M10.63 3.93L6.06 15.58c-.27.68.23 1.42.97 1.42.43 0 .82-.27.98-.68L8.87 14h6.25l.87 2.32c.15.41.54.68.98.68.73 0 1.24-.74.97-1.42L13.37 3.93C13.14 3.37 12.6 3 12 3c-.6 0-1.15.37-1.37.93zM9.62 12L12 5.67 14.38 12H9.62z" />
+                        d="M10.63 3.93L6.06 15.58c-.27.68.23 1.42.97 1.42.43 0 .82-.27.98-.68L8.87 14h6.25l.87 2.32c.15.41.54.68.98.68.73 0 1.24-.74.97-1.42L13.37 3.93C13.14 3.37 12.6 3 12 3c-.6 0-1.15.37-1.37.93zM9.62 12L12 5.67 14.38 12H9.62z" />
                     </svg>
-                </button>
-                <button class="btn btn-outline-light">
+                    <input type="color" name="txtColorBtn" id="txtColorBtn" class="color-fix">
+                </label>
+
+                <button class="btn btn-outline-light" id="lAlignBtn">
                     <i class="fa-solid fa-align-left"></i>
                 </button>
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="cAlignBtn">
                     <i class="fa-solid fa-align-center"></i>
                 </button>
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="rAlignBtn">
                     <i class="fa-solid fa-align-right"></i>
                 </button>
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="justifyBtn">
                     <i class="fa-solid fa-align-justify"></i>
                 </button>
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="undoBtn">
                     <i class="fa-solid fa-rotate-left"></i>
                 </button>
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-light" id="redoBtn">
                     <i class="fa-solid fa-rotate-right"></i>
                 </button>
             </div>
         </div>
         <div class="row">
             <div class="col-8 mx-auto my-3 border border-3 editor rounded rounded-3 bg-light"
-                contenteditable="true">
-            </div>
+            contenteditable="true" id="textContainer">
         </div>
     </div>
+</div>
+<script src="app.js"></script>
 </body>
 
 </html>
